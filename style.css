@@ -88,12 +88,33 @@ footer {
   justify-content: space-between;
 }
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: bold;
+}
+
 .contact-icons img{
   height: 30px;
 }
 
+.footer-page {
+  display: flex;
+}
+
+.footer-page-list{
+  margin-right: 20px;
+}
+
 .footer-page-list a{
+  margin-bottom: 10px;
   display: block;
   text-decoration: none;
   color: white;
+}
+
+.footer-page-list a:hover{
+  text-decoration: underline;
 }
