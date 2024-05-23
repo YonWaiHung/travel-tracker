@@ -112,6 +112,11 @@ section {
 .travel-list-item-details{
   display: flex;
 }
+.travel-list-item-details div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
 
 .item-detail{
   margin-right: 10px;
