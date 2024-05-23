@@ -1,10 +1,16 @@
 header {
   background-color: #008800;
   color: white;
-  padding: 10px;
+  font-weight: bold;
+  padding: 30px 50px 30px 50px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
   align-items: center;
 }
 
@@ -15,17 +21,35 @@ header div a{
   color: white;
 }
 
+header div :hover{
+  text-decoration: underline;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #F5F5DC;
 }
 
-button {
+.theme-button {
+  height: fit-content;
   background-color: #C8A2C8;
+  border-radius: 8%;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
 }
 
+.theme-button:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #880088;
+}
+
+/* Title Box */
 .title-box {
   display: flex;
   justify-content: center;
@@ -38,8 +62,20 @@ button {
 .title-box div{
   text-align: center;
   border: dashed 2px black;
+  padding: 10px;
   width: fit-content;
   margin: 20px;
+}
+
+.title-box div p{
+  color: grey;
+}
+
+/* Map Window */
+.map-window {
+  width: 90vw;
+  height: 100vh;
+  border: 0;
 }
 
 /* Footer */
