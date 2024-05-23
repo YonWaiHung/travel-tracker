@@ -2,11 +2,12 @@ header {
   background-color: #008800;
   color: white;
   font-weight: bold;
-  padding: 30px 50px 30px 50px;
+  padding: 20px 50px 20px 50px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 
 header div {
@@ -14,7 +15,7 @@ header div {
   align-items: center;
 }
 
-header div a{
+header a{
   text-decoration: none;
   height: fit-content;
   margin-right: 10px;
@@ -33,6 +34,28 @@ body {
   background-color: #F5F5DC;
 }
 
+section {
+  margin: 0 10vw 0 10vw;
+}
+
+/* Search section */
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  /* border: solid; */
+}
+
+.search-section input {
+  width: 65vw;
+}
+
+.search-section div {
+  padding: 0 20px 0 20px;
+  /* border: solid; */
+}
+
+/* Button */
 .theme-button {
   height: fit-content;
   background-color: #C8A2C8;
@@ -41,6 +64,7 @@ body {
   padding: 5px;
   font-weight: bold;
   color: white;
+  margin-right: 5px;
 }
 
 .theme-button:hover {
@@ -67,9 +91,33 @@ body {
   margin: 20px;
 }
 
-.title-box div p{
+.title-box p{
   color: grey;
 }
+
+/* Travel List Items */
+
+.travel-list-item{
+  padding: 20px;
+  display: flex;
+  background-color: white;
+}
+
+.travel-list-item img{
+  width: 20vw;
+  height: 30vh;
+  margin-right: 20px;
+}
+
+.travel-list-item-details{
+  display: flex;
+}
+
+.item-detail{
+  margin-right: 10px;
+  color: grey;
+}
+
 
 /* Map Window */
 .map-window {
