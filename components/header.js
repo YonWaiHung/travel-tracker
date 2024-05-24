@@ -11,7 +11,6 @@ class Header extends HTMLElement {
         <a href="./travel.html">Travel</a>
         <a href="./traveled.html">Traveled</a>
         <a href="">About</a>
-        <button class="theme-button">Button</button>
       </div>
     </header>
     `;
