@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     <header>
       <a href="./index.html"><h4>TT's Travel Tracker</h4></a>
       <div>
-        <a href="">Add</a>
+        <a href="./add.html">Add</a>
         <a href="./travel.html">Travel</a>
         <a href="./traveled.html">Traveled</a>
         <a href="">About</a>

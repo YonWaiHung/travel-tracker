@@ -123,6 +123,49 @@ section {
   color: grey;
 }
 
+/* Add Page CSS */
+.input-box {
+  background-color: white;
+  padding: 20px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputImg {
+  width: 15vw;
+  height: 40vh;
+  margin-right: 20px;
+}
+
+.img-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-fields div{
+  margin-bottom: 20px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+.button-row a {
+  margin: 30px 10px 0 10px;
+}
+
+.theme-button.add {
+  background-color: #00BB00;
+}
+
+.theme-button.cancel {
+  background-color: #bb0000;
+}
+
 
 /* Map Window */
 .map-window {
