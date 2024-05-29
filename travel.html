@@ -41,10 +41,10 @@
           <p class="item-detail note">Note</p>
         </div>
         <div>
-          <p>Mt. Fuji</p>
-          <p>Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
-          <p>21 / 5/ 2024</p>
-          <p>Mount Fuji would be cool to see around but no climbing tho.</p>
+          <p id="travel_name">Mt. Fuji</p>
+          <p id="travel_location">Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
+          <p id="travel_date">21 / 5/ 2024</p>
+          <p id="travel_note">Mount Fuji would be cool to see around but no climbing tho.</p>
         </div>
       </div>
     </section>
@@ -52,6 +52,24 @@
     <!-- Footer -->
     <footer-component></footer-component>
   </main>
+
+  <script>
+    const apiUrl = 'http://127.0.0.1:3306/travel';
+
+    async function loadUsers() {
+      const response = await fetch(apiUrl);
+      const users = await response.json();
+      const userList = document.getElementById('userList');
+      userList.innerHTML = '';
+      users.forEach(user => {
+        const li = document.createElement('li');
+        li.textContent = `${user.name} (${user.email})`;
+        userList.appendChild(li);
+      });
+    }
+
+    loadUsers();
+  </script>
 </body>
 
 </html>
