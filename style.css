@@ -101,6 +101,7 @@ section {
   padding: 20px;
   display: flex;
   background-color: white;
+  margin-bottom: 50px;
 }
 
 .travel-list-item img{
