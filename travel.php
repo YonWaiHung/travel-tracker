@@ -16,7 +16,6 @@ include("developers.php");
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
   <script src="components/travelData.js" type="text/javascript" defer></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -48,12 +47,6 @@ include("developers.php");
             <p class="item-detail date">Date</p>
             <p class="item-detail note">Note</p>
           </div>
-          <!-- <div>
-          <p id="travel_name">Mt. Fuji</p>
-          <p id="travel_location">Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
-          <p id="travel_date">21 / 5 / 2024</p>
-          <p id="travel_note">Mount Fuji would be cool to see around but no climbing tho.</p>
-        </div> -->
           <div>
             <p id="travel_name">Loading...</p>
             <p id="travel_location">Loading...</p>
@@ -123,12 +116,6 @@ include("developers.php");
                 <p class="item-detail date">Date</p>
                 <p class="item-detail note">Note</p>
               </div>
-              <!-- <div>
-          <p id="travel_name">Mt. Fuji</p>
-          <p id="travel_location">Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
-          <p id="travel_date">21 / 5 / 2024</p>
-          <p id="travel_note">Mount Fuji would be cool to see around but no climbing tho.</p>
-        </div> -->
               <div>
                 <p id="travel_name"><?php echo $data['travel_name'] ?? ''; ?></p>
                 <p id="travel_location"><?php echo $data['travel_location'] ?? ''; ?></p>
