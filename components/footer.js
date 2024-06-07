@@ -17,10 +17,10 @@ class Footer extends HTMLElement {
       </div>
       <div class="footer-page">
         <div class="footer-page-list">
-          <a href="./index.html">Home</a>
-          <a href="./add.html">Add</a>
-          <a href="./travel.html">Travel</a>
-          <a href="./traveled.html">Traveled</a>
+          <a href="./index.php">Home</a>
+          <a href="./add.php">Add</a>
+          <a href="./travel.php">Travel</a>
+          <a href="./traveled.php">Traveled</a>
         </div>
         <div class="footer-page-list">
           <a href="#">About Me</a>

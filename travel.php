@@ -9,7 +9,7 @@ include("developers.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel List</title>
   <link rel="icon" type="image/x-icon" href="./assets/images/travel-car.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -24,45 +24,46 @@ include("developers.php");
     <!-- Header -->
     <header-component></header-component>
 
-    <section>
-      <h1>Travel List</h1>
-    </section>
+    <div class="body-content">
+      <section>
+        <h1>Travel List</h1>
+      </section>
 
-    <!-- Search Function -->
-    <section class="search-section">
-      <input type="text" placeholder="Search Travel Item...">
-      <div>
-        <button class="theme-button">Search</button>
-        <button class="theme-button">Filter</button>
-      </div>
-    </section>
-
-
-    <section class="travel-list-item">
-      <img src="" id="travel_photo" alt="Picture of Travel">
-      <div class="travel-list-item-details">
+      <!-- Search Function -->
+      <section class="search-section">
+        <input type="text" placeholder="Search Travel Item...">
         <div>
-          <p class="item-detail name">Name</p>
-          <p class="item-detail location">Location</p>
-          <p class="item-detail date">Date</p>
-          <p class="item-detail note">Note</p>
+          <button class="theme-button">Search</button>
+          <button class="theme-button">Filter</button>
         </div>
-        <!-- <div>
+      </section>
+
+
+      <section class="travel-list-item">
+        <img src="" id="travel_photo" alt="Picture of Travel">
+        <div class="travel-list-item-details">
+          <div>
+            <p class="item-detail name">Name</p>
+            <p class="item-detail location">Location</p>
+            <p class="item-detail date">Date</p>
+            <p class="item-detail note">Note</p>
+          </div>
+          <!-- <div>
           <p id="travel_name">Mt. Fuji</p>
           <p id="travel_location">Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
           <p id="travel_date">21 / 5 / 2024</p>
           <p id="travel_note">Mount Fuji would be cool to see around but no climbing tho.</p>
         </div> -->
-        <div>
-          <p id="travel_name">Loading...</p>
-          <p id="travel_location">Loading...</p>
-          <p id="travel_date">Loading...</p>
-          <p id="travel_note">Loading...</p>
+          <div>
+            <p id="travel_name">Loading...</p>
+            <p id="travel_location">Loading...</p>
+            <p id="travel_date">Loading...</p>
+            <p id="travel_note">Loading...</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- <section class="travel-list-item">
+      <!-- <section class="travel-list-item">
       <div class="col-sm-8">
         <?php echo $deleteMsg ?? ''; ?>
         <div class="table-responsive">
@@ -108,48 +109,49 @@ include("developers.php");
       </div>
     </section> -->
 
-    <?php
-    if (is_array($fetchData)) {
-      $sn = 1;
-      foreach ($fetchData as $data) {
-    ?>
-        <section class="travel-list-item">
-          <img src=<?php echo $data['travel_photo'] ?? ''; ?> id="travel_photo" alt="Picture of Travel">
-          <div class="travel-list-item-details">
-            <div>
-              <p class="item-detail name">Name</p>
-              <p class="item-detail location">Location</p>
-              <p class="item-detail date">Date</p>
-              <p class="item-detail note">Note</p>
-            </div>
-            <!-- <div>
+      <?php
+      if (is_array($fetchData)) {
+        $sn = 1;
+        foreach ($fetchData as $data) {
+      ?>
+          <section class="travel-list-item">
+            <img src=<?php echo $data['travel_photo'] ?? ''; ?> id="travel_photo" alt="Picture of Travel">
+            <div class="travel-list-item-details">
+              <div>
+                <p class="item-detail name">Name</p>
+                <p class="item-detail location">Location</p>
+                <p class="item-detail date">Date</p>
+                <p class="item-detail note">Note</p>
+              </div>
+              <!-- <div>
           <p id="travel_name">Mt. Fuji</p>
           <p id="travel_location">Kitayama, Fujinomiya, Shizuoka 418-0112, Japan</p>
           <p id="travel_date">21 / 5 / 2024</p>
           <p id="travel_note">Mount Fuji would be cool to see around but no climbing tho.</p>
         </div> -->
-            <div>
-              <p id="travel_name"><?php echo $data['travel_name'] ?? ''; ?></p>
-              <p id="travel_location"><?php echo $data['travel_location'] ?? ''; ?></p>
-              <p id="travel_date"><?php echo $data['travel_date'] ?? ''; ?></p>
-              <p id="travel_note"><?php echo $data['travel_note'] ?? ''; ?></p>
+              <div>
+                <p id="travel_name"><?php echo $data['travel_name'] ?? ''; ?></p>
+                <p id="travel_location"><?php echo $data['travel_location'] ?? ''; ?></p>
+                <p id="travel_date"><?php echo $data['travel_date'] ?? ''; ?></p>
+                <p id="travel_note"><?php echo $data['travel_note'] ?? ''; ?></p>
+              </div>
             </div>
-          </div>
-        </section>
-      <?php
-        $sn++;
-      }
-    } else { ?>
-      <tr>
-        <td colspan="8">
-          <?php echo $fetchData; ?>
-        </td>
-      <tr>
-      <?php
-    } ?>
+          </section>
+        <?php
+          $sn++;
+        }
+      } else { ?>
+        <tr>
+          <td colspan="8">
+            <?php echo $fetchData; ?>
+          </td>
+        <tr>
+        <?php
+      } ?>
+    </div>
 
-      <!-- Footer -->
-      <footer-component></footer-component>
+    <!-- Footer -->
+    <footer-component></footer-component>
   </main>
 </body>
 
