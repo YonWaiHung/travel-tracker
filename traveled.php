@@ -1,3 +1,6 @@
+<?php
+include("traveledData.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,28 +35,40 @@
         </div>
       </section>
 
-      <section class="travel-list-item">
-        <img src="./assets/images/snowdon.jpg" alt="Picture of Travel">
-        <div class="travel-list-item-details">
-          <div>
-            <p class="item-detail name">Name</p>
-            <p class="item-detail location">Location</p>
-            <p class="item-detail date">Date</p>
-            <p class="item-detail note">Note</p>
-          </div>
-          <div>
-            <p>Snowdonia</p>
-            <p>Wales, United Kingdom</p>
-            <p>21 / 5/ 2023</p>
-            <p>Sharing some pics from our few days April adventures in one of the most beautiful places
-              in North Love Wales. The walk up on the hills was a bit more challenging but we made it.
-              Walking down the hill just as tough. Riding bikes in the rain and in the sea was the best fun…</p>
-          </div>
-        </div>
-      </section>
-      
+      <?php
+      if (is_array($fetchData)) {
+        $sn = 1;
+        foreach ($fetchData as $data) {
+      ?>
+          <section class="travel-list-item">
+            <img src=<?php echo $data['traveled_photo'] ?? ''; ?> alt="Picture of Travel">
+            <div class="travel-list-item-details">
+              <div>
+                <p class="item-detail name">Name</p>
+                <p class="item-detail location">Location</p>
+                <p class="item-detail date">Date</p>
+                <p class="item-detail note">Note</p>
+              </div>
+              <div>
+              <p><?php echo $data['traveled_name'] ?? ''; ?></p>
+                <p><?php echo $data['traveled_location'] ?? ''; ?></p>
+                <p><?php echo $data['traveled_date'] ?? ''; ?></p>
+                <p><?php echo $data['traveled_note'] ?? ''; ?></p>
+              </div>
+            </div>
+          </section>
+        <?php
+          $sn++;
+        }
+      } else { ?>
+        <tr>
+          <td colspan="8">
+            <?php echo $fetchData; ?>
+          </td>
+        <tr>
+        <?php
+      } ?>
     </div>
-
 
     <!-- Footer -->
     <footer-component></footer-component>

@@ -37,7 +37,6 @@ include("developers.php");
         </div>
       </section>
 
-
       <section class="travel-list-item">
         <img src="" id="travel_photo" alt="Picture of Travel">
         <div class="travel-list-item-details">
