@@ -27,6 +27,7 @@
     <section>
       <div class="input-box">
         <div class="input-row">
+          <!-- Image Input -->
           <div class="img-input">
             <img src="" id="selectedImage" alt="Please put an image for thumbnail" class="inputImage">
             <input type="file" name="inputImg" id="inputImg" accept="image/*" onchange="displayImage()">

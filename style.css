@@ -136,18 +136,25 @@ section {
 
 .input-row {
   display: flex;
-  justify-content: space-evenly;
-}
-
-.inputImg {
-  width: 15vw;
-  height: 40vh;
-  margin-right: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 0 20px;
 }
 
 .img-input {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputImage {
+  width: 20vw;
+  height: 30vh;
+  text-align: center;
+  background-color: rgb(205, 205, 205);
+  border: #404040 dotted;
+  margin-bottom: 10px;
 }
 
 .input-fields div{
@@ -161,6 +168,10 @@ section {
 
 .button-row a {
   margin: 30px 10px 0 10px;
+}
+
+.theme-button {
+  padding: 10px;
 }
 
 .theme-button.add {
